@@ -17,6 +17,11 @@
 	clear: both;
 	*zoom: 1;
 }
+/*к body задал такой стиль для фикса проблемы- когда высота окна браузера меньше доски (600px) то доска обрезается сверху и снизу, и при скроле эти обрезанные части увидеть не возможно. Правильно сделал или нет?:)   */
+body{
+	height: 700px;
+	position: relative;
+}
 main{
 	position: absolute;
 	width: 600px;
@@ -33,6 +38,7 @@ div{
 	background-color: #bea0a0;
 	border: 1px #811d25 solid;	
 }
+/*решил поэкспериментировать*/
 div:nth-child(-n+8):nth-child(odd),
 div:nth-child(n+9):nth-child(-n+16):nth-child(even),
 div:nth-child(n+17):nth-child(-n+24):nth-child(odd),
